@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d16">
+  <title>OPERATION THESIS — Cybersecurity Assessment</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Operation Thesis home"><span class="brand-mark">OT</span><span>OPERATION <b>THESIS</b></span></a>
+    <span class="status"><i></i> SECURE SESSION</span>
+  </header>
+
+  <main class="shell">
+    <section id="intro" class="panel view active">
+      <p class="eyebrow">UNIVERSITY CYBERSECURITY LAB // 2026</p>
+      <h1>Test di <span>Cybersecurity</span></h1>
+      <p class="lead">Valuta la tua consapevolezza digitale attraverso una breve sessione di assessment.</p>
+      <div class="notice">
+        <div class="notice-icon">⌁</div>
+        <div><b>Protocollo di valutazione</b><p>15 quesiti previsti · Risposta multipla · Punteggio massimo 100</p></div>
+      </div>
+      <label for="nickname">IDENTIFICATIVO PARTECIPANTE</label>
+      <input id="nickname" maxlength="18" autocomplete="nickname" placeholder="Scegli un nickname" />
+      <p class="micro">Usa un nickname: non inserire password, email o dati personali.</p>
+      <button id="startBtn" class="btn primary">AVVIA ASSESSMENT <span>→</span></button>
+      <p class="micro center">Tempo stimato: 3–5 minuti</p>
+    </section>
+
+    <section id="quiz" class="panel view">
+      <div class="quiz-head">
+        <div><p class="eyebrow">ASSESSMENT IN CORSO</p><h2>Security knowledge check</h2></div>
+        <div class="counter"><strong id="counter">01</strong><span>/ 15</span></div>
+      </div>
+      <div class="progress"><div id="progressFill"></div></div>
+      <p id="category" class="tag">PASSWORD SECURITY</p>
+      <h3 id="questionText" class="question"></h3>
+      <div id="answers" class="answers"></div>
+      <div class="quiz-foot"><span>OPERATION THESIS</span><span id="scoreLive">PUNTEGGIO: 000</span></div>
+    </section>
+
+    <section id="incident" class="view incident">
+      <div class="incident-noise"></div>
+      <p class="incident-kicker">CRITICAL SECURITY EVENT // OT-10</p>
+      <div class="alert-symbol">!</div>
+      <h1 class="glitch" data-text="SYSTEM COMPROMISED">SYSTEM COMPROMISED</h1>
+      <p class="incident-copy">Rilevata un'attività anomala nella sessione.<br>Accesso non autorizzato.</p>
+      <div class="terminal">
+        <p><span>&gt;</span> Analisi sessione in corso...</p>
+        <p><span>&gt;</span> Verifica integrità dei dati...</p>
+        <p class="red"><span>&gt;</span> ANOMALIA RILEVATA</p>
+        <p><span>&gt;</span> Avvio protocollo di contenimento...</p>
+      </div>
+      <div class="countdown" id="countdown">00:20</div>
+      <p class="micro center">TUTTI I DISPOSITIVI SONO COMPROMESSI</p>
+    </section>
+
+    <section id="reveal" class="panel view">
+      <p class="eyebrow">INCIDENT REPORT // CHIUSURA</p>
+      <div class="reveal-mark">✓</div>
+      <h1>Tranquillo.<br><span>Sei stato hackerato!</span></h1>
+      <p class="lead">Ti ho solo rubato tutti i tuoi dati e soldi, Grazie.</p>
+      <div class="final-message">
+        <p>MAI CLICCARE SUI LINK DI SCONOSCUTI.</p>
+        <p class="muted">NEMMENO SE SEMBRANO AFFIDABILI.</p>
+      </div>
+      <h2 class="troll">SEI STATO VERAMENTE HACKERATO?<br><span>NO. SEI STATO INCULATO. (A paolo piace il cazzo) 😂</span></h2>
+      <div class="score-card">
+        <span>IL TUO RISULTATO</span>
+        <strong id="finalScore">0/100</strong>
+      </div>
+      <label for="silenceCheck" class="checkline"><input type="checkbox" id="silenceCheck"> Accetto il Protocollo Silenzio: niente spoiler agli altri partecipanti.</label>
+      <button id="submitBtn" class="btn primary">INVIA RISULTATO ALLA CLASSIFICA →</button>
+      <p id="submitStatus" class="micro center" aria-live="polite"></p>
+    </section>
+
+    <section id="leaderboard" class="panel view">
+      <p class="eyebrow">GLOBAL RANKING // OPERATION THESIS</p>
+      <h1>Classifica <span>partecipanti</span></h1>
+      <p class="lead">Risultati registrati per questa sessione.</p>
+      <div id="leaderboardList" class="leaderboard-list"><p class="micro">Caricamento classifica...</p></div>
+      <button id="retryBtn" class="btn secondary">TORNA ALL'INIZIO</button>
+      <p class="micro center">I risultati sono associati esclusivamente al nickname scelto.</p>
+    </section>
+
+    <footer class="footer"><span>OT // CYBER AWARENESS INITIATIVE</span><span>EDITION 2026</span></footer>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/leaderboard.js"></script>
+</body>
+</html>
